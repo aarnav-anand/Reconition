@@ -1,53 +1,20 @@
 
-import React, { useState, useEffect } from 'react';
-import { cn } from '../lib/utils';
+import React from 'react';
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrolled]);
-
   return (
-    <nav
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out py-4 md:py-5",
-        scrolled 
-          ? "bg-white/80 backdrop-blur-md shadow-subtle" 
-          : "bg-transparent"
-      )}
-    >
+    <nav className="bg-white shadow-sm py-4">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="/" className="flex items-center space-x-2 text-foreground">
-            <span className="text-xl font-semibold">Reconition Research</span>
-          </a>
+          <a href="/" className="text-xl font-playfair text-gray-800">Reconition Research</a>
         </div>
         
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="flex items-center">
           <a
-            href="/#about"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            href="#about"
+            className="text-sm font-playfair text-gray-600 hover:text-gray-800 transition-colors"
           >
-            About
-          </a>
-          <div className="w-px h-5 bg-border"></div>
-          <a
-            href="/#vision"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Vision
+            Our Mission
           </a>
         </div>
       </div>
