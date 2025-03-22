@@ -23,6 +23,7 @@ export default {
 				sans: ["Inter", "system-ui", "sans-serif"],
 				display: ["Inter", "system-ui", "sans-serif"],
 				playfair: ["Playfair Display", "serif"],
+				josefin: ["Josefin Sans", "sans-serif"],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

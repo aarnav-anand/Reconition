@@ -6,11 +6,11 @@ const HeroSection = () => {
     <section className="py-20 bg-black relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-playfair italic mb-6 text-white">
+          <h1 className="text-4xl md:text-5xl font-playfair mb-6 text-white">
             Reconition Research
           </h1>
           
-          <p className="text-xl text-gray-300 mb-10 font-playfair">
+          <p className="text-xl text-gray-300 mb-10 font-josefin">
             An invention laboratory dedicated to research and development in the fields of
             artificial intelligence, robotics, mathematics, physics, chemistry, and biology.
           </p>
