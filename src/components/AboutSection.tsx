@@ -6,16 +6,21 @@ const AboutSection = () => {
   const elementsRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    // Set initial visibility to ensure elements are visible by default
+    elementsRef.current.forEach((el) => {
+      if (el) el.classList.add('opacity-100');
+    });
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
+            entry.target.classList.add('animate-fade-in-up', 'opacity-100');
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
     );
 
     elementsRef.current.forEach((el) => {
@@ -42,7 +47,7 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div 
             ref={(el) => (elementsRef.current[0] = el)} 
-            className="text-center mb-16 opacity-0"
+            className="text-center mb-16 opacity-100 transition-all duration-500"
           >
             <h2 className="text-3xl font-semibold tracking-tight mb-4">About Reconition Research</h2>
             <p className="text-lg text-muted-foreground">
@@ -53,7 +58,7 @@ const AboutSection = () => {
           <div className="space-y-16">
             <div 
               ref={(el) => (elementsRef.current[1] = el)} 
-              className="glass-panel p-8 opacity-0"
+              className="glass-panel p-8 opacity-100 transition-all duration-500"
             >
               <h3 className="text-xl font-medium mb-4">Our Mission</h3>
               <p className="text-muted-foreground mb-4">
@@ -69,7 +74,7 @@ const AboutSection = () => {
             
             <div 
               ref={(el) => (elementsRef.current[2] = el)} 
-              className="glass-panel p-8 opacity-0"
+              className="glass-panel p-8 opacity-100 transition-all duration-500"
             >
               <h3 className="text-xl font-medium mb-4">Coming Soon</h3>
               <p className="text-muted-foreground">
@@ -106,7 +111,7 @@ const AboutSection = () => {
             <div 
               id="vision"
               ref={(el) => (elementsRef.current[3] = el)} 
-              className="glass-panel p-8 opacity-0"
+              className="glass-panel p-8 opacity-100 transition-all duration-500"
             >
               <h3 className="text-xl font-medium mb-4">Our Vision</h3>
               <p className="text-muted-foreground">
