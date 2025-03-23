@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <a
             href="#about"
-            className="text-sm font-josefin text-gray-300 hover:text-white transition-colors"
+            className="text-sm font-playfair text-gray-300 hover:text-white transition-colors"
           >
             Our Mission
           </a>

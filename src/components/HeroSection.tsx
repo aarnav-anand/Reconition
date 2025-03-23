@@ -10,7 +10,7 @@ const HeroSection = () => {
             Reconition Research
           </h1>
           
-          <p className="text-xl text-gray-300 mb-10 font-josefin">
+          <p className="text-xl text-gray-300 mb-10 font-playfair">
             An invention laboratory dedicated to research and development in the fields of
             artificial intelligence, robotics, mathematics, physics, chemistry, and biology.
           </p>
