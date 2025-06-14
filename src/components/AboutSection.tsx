@@ -12,7 +12,7 @@ const AboutSection = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-playfair tracking-tight mb-4 text-white">Reconition Research</h2>
             <p className="text-base text-gray-400 font-playfair">
-              Founded on March 9, 2025
+              Founded by Aarnav Anand on March 9, 2025
             </p>
           </div>
           
@@ -25,7 +25,9 @@ const AboutSection = () => {
             </p>
             <p className="text-gray-300 mb-6 leading-relaxed font-playfair">
               Our work spans artificial intelligence, robotics, mathematics, physics, chemistry, and biology, 
-              with a focus on creating technologies that benefit humanity.
+              with a focus on creating technologies that benefit humanity. We are currently researching AI for 
+              Antibiotics Discovery, exploring how artificial intelligence can accelerate the development of 
+              new antibiotics to combat resistant bacterial infections.
             </p>
             <p className="text-gray-300 mb-8 leading-relaxed font-playfair">
               We are so interested in the future that this website is vibe coded.
